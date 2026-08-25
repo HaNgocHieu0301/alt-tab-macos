@@ -54,11 +54,10 @@ The `src/` folder groups files by feature, so files that change together live to
 | `src/events/`           | incoming events we listen to (keyboard, mouse, cursor, Dock, AX queries, etc.) |
 | `src/macos/`            | wrappers around macOS APIs (AX/CGS call schedulers, permissions, login item); `src/macos/api-wrappers/` holds the retro-engineered private-API signatures |
 | `src/preferences/`      | user settings: storage, migrations, and the Settings window |
-| `src/pro/`              | the paid "Pro" features (license, scheduling, related UI) |
 | `src/secondary-windows/`| windows other than the switcher (feedback, permission, debug) |
 | `src/kit/`              | reusable AppKit building blocks (custom buttons, views, controls) |
 | `src/util/`             | generic helpers (background work, throttling, scheduling policy) |
-| `src/api/`              | client for our backend (license and feedback endpoints) |
+| `src/api/`              | client for our backend (feedback endpoint) |
 | `src/vendors/`          | glue code for vendored libraries (AppCenter, Sparkle, ObjC exception catcher) |
 | `src/debug/`            | benchmarking and QA tooling |
 | `src/experimentations/` | private APIs and approaches we investigated but don't ship |
