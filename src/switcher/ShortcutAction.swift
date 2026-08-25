@@ -29,7 +29,6 @@ enum ShortcutActions {
         ShortcutAction(id: "minDeminWindowShortcut", perform: { Windows.selectedWindow()?.minDemin() }),
         ShortcutAction(id: "toggleFullscreenWindowShortcut", perform: { Windows.selectedWindow()?.toggleFullscreen() }),
         ShortcutAction(id: "quitAppShortcut", perform: { Windows.selectedWindow()?.application.quit() }),
-        ShortcutAction(id: "hideShowAppShortcut", perform: { Windows.selectedWindow()?.application.hideOrShow() }),
         ShortcutAction(id: "searchShortcut", perform: {
             guard SwitcherSession.isActive else { return }
             TilesView.toggleSearchModeFromShortcut()

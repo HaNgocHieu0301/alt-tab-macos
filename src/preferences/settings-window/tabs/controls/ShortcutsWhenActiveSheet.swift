@@ -12,7 +12,6 @@ class ShortcutsWhenActiveSheet: SheetWindow {
     private static let labelMinDemin = ControlsTab.staticShortcutLabels["minDeminWindowShortcut"]!
     private static let labelFullscreen = ControlsTab.staticShortcutLabels["toggleFullscreenWindowShortcut"]!
     private static let labelQuit = ControlsTab.staticShortcutLabels["quitAppShortcut"]!
-    private static let labelHideShow = ControlsTab.staticShortcutLabels["hideShowAppShortcut"]!
 
     /// Pre-build search index for the open-button. See `SettingsSearchIndex.sheetSearchableStrings`.
     /// `ProBadgeView.proLabel` contributes the "Pro" tag rendered on the search row.
@@ -20,7 +19,7 @@ class ShortcutsWhenActiveSheet: SheetWindow {
         title,
         labelFocus, labelPrevious, labelCancel,
         labelSearch,
-        labelClose, labelMinDemin, labelFullscreen, labelQuit, labelHideShow,
+        labelClose, labelMinDemin, labelFullscreen, labelQuit,
         ProBadgeView.proLabel,
     ]
 
@@ -39,8 +38,6 @@ class ShortcutsWhenActiveSheet: SheetWindow {
             rightViews: [LabelAndControl.makeLabelWithRecorder(Self.labelFullscreen, "toggleFullscreenWindowShortcut", Preferences.toggleFullscreenWindowShortcut, labelPosition: .right)[0]])
         let quitAppShortcut = TableGroupView.Row(leftTitle: Self.labelQuit,
             rightViews: [LabelAndControl.makeLabelWithRecorder(Self.labelQuit, "quitAppShortcut", Preferences.quitAppShortcut, labelPosition: .right)[0]])
-        let hideShowAppShortcut = TableGroupView.Row(leftTitle: Self.labelHideShow,
-            rightViews: [LabelAndControl.makeLabelWithRecorder(Self.labelHideShow, "hideShowAppShortcut", Preferences.hideShowAppShortcut, labelPosition: .right)[0]])
         let table = TableGroupView(title: Self.title, width: SheetWindow.width)
         _ = table.addRow(focusWindowShortcut)
         _ = table.addRow(previousWindowShortcut)
@@ -52,7 +49,6 @@ class ShortcutsWhenActiveSheet: SheetWindow {
         _ = table.addRow(minDeminWindowShortcut)
         _ = table.addRow(toggleFullscreenWindowShortcut)
         _ = table.addRow(quitAppShortcut)
-        _ = table.addRow(hideShowAppShortcut)
         return table
     }
 

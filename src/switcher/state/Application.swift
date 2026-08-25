@@ -159,14 +159,6 @@ class Application: NSObject {
         App.refreshOpenUiAfterExternalEvent([])
     }
 
-    func hideOrShow() {
-        if runningApplication.isHidden {
-            runningApplication.unhide()
-        } else {
-            runningApplication.hide()
-        }
-    }
-
     func canBeQuit() -> Bool {
         return self.bundleIdentifier != "com.apple.finder" || Preferences.finderShowsQuitMenuItem
     }
